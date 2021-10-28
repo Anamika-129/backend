@@ -10,7 +10,7 @@ const io = new Server(httpServer, {
   cors: { origin: ["http://localhost:3000"] },
 });
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 const userRouter = require("./router/userRouter");
 const chatRouter = require("./router/chatRouter");
 
