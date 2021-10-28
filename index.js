@@ -34,21 +34,9 @@ app.use(express.static("./uploads"));
 app.use("/user", userRouter);
 app.use("/chat", chatRouter);
 
-
 app.get("/", (req, res) => {
   console.log("request from client!!");
-  res.send("you got a response");
-});
-
-app.get("/add", (req, res) => {
-  console.log("request from client on add!!");
-  res.send("you got a response from add at root");
-});
-
-app.get("/home", (req, res) => {
-  console.log("request from client at home!!");
-  // res.send('you got a response from home');
-  res.json({ message: "Success" });
+  res.send("Server Online !");
 });
 
 httpServer.listen(port, () => {
