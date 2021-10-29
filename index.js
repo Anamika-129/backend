@@ -16,7 +16,7 @@ const chatRouter = require("./router/chatRouter");
 
 const cors = require("cors");
 
-app.use(cors({ origin: ["http://localhost:3000"] }));
+app.use(cors({ origin: ["https://chatapp-frontend8.herokuapp.com/chat"] }));
 app.use(express.json());
 
 io.on("connection", (socket) => {
