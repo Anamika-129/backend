@@ -32,7 +32,7 @@ router.post('/login', (req, res) => {
                 if(data.password == db_data.password)
                 {
                     console.log('Login Success');
-                    res.status(200).json({ message: 'success' });
+                    res.status(200).json(db_data);
                     return
                 }
                 else{
